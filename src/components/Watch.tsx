@@ -5,6 +5,7 @@ import Chip from "@mui/material/Chip";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
+import { CircularProgress } from "@mui/material";
 
 const Watch = () => {
   const { Id } = useParams();
@@ -50,7 +51,10 @@ const Watch = () => {
               ))}
             </div>
             <h1 className="mt-4">Language - {show.language}</h1>
-            <h1 className="mt-4">IMDB - {show.rating.average}/10</h1>
+            <h1 className="mt-4">
+              IMDB -{" "}
+              {show.rating.average ? `${show.rating.average} /10` : "not rated"}
+            </h1>
             <div
               className="mt-6 text-slate-100 md:text-xl sm:text-sm"
               dangerouslySetInnerHTML={{ __html: show.summary }}
@@ -67,7 +71,7 @@ const Watch = () => {
           </div>
         </>
       ) : (
-        <div>loading...</div>
+        <CircularProgress />
       )}
     </div>
   );

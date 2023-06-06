@@ -18,9 +18,9 @@ const Form = () => {
   };
 
   return (
-    <div className=" bg-slate-300 p-10 mt-24 mb-11 gap-36">
-      <h1 className="text-4xl text-center mb-10 text-gray-900 uppercase font-bold tracking-wider">
-        {localStorage.getItem("movie")}
+    <div className=" bg-slate-400 p-10 mt-24 mb-11 gap-36">
+      <h1 className="text-4xl text-center mb-10 text-gray-900 uppercase font-bold tracking-wider ">
+        *****&nbsp;{localStorage.getItem("movie")}&nbsp;*****
       </h1>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
