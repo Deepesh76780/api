@@ -3,11 +3,18 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Chip from "@mui/material/Chip";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 
 const Watch = () => {
   const { Id } = useParams();
   const [show, setShow] = useState<any>([]);
+  const navigate = useNavigate();
+
+  const handleClick: any = () => {
+    localStorage.setItem("movie", show.name);
+    navigate("/book");
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,8 +60,7 @@ const Watch = () => {
               variant="contained"
               color="primary"
               className="mt-6"
-              href={show.officialSite}
-              target="_blank"
+              onClick={handleClick}
             >
               Book Ticket
             </Button>

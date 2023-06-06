@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home.tsx";
 import Watch from "./components/Watch.tsx";
+import Form from "./components/Form.tsx";
 import * as React from "react";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/show/:Id" element={<Watch />} />
+        <Route path="/book" element={<Form />} />
       </Routes>
     </div>
   );
