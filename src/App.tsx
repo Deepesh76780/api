@@ -9,12 +9,10 @@ function App() {
       <h1 className="text-center text-6xl mt-5 tracking-wider font-bold">
         <span className="text-red-500">Q</span>FLIX
       </h1>
-      <div className="flex flex-wrap gap-24 justify-center bg-dark-theme p-10 mt-11">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/show/:Id" element={<Watch />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/show/:Id" element={<Watch />} />
+      </Routes>
     </div>
   );
 }
