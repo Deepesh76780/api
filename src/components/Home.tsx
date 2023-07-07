@@ -22,7 +22,7 @@ const Home = () => {
             <Card
               Id={item.show.id}
               name={item.show.name}
-              Img={item.show.image.original}
+              Img={item.show.image.original ? item.show.image.original : ""}
             />
           ))}
         </div>
