@@ -10,9 +10,15 @@ const Home = () => {
   // interface IShow {}
 
   useEffect(() => {
-    axios.get("https://api.tvmaze.com/search/shows?q=all").then((res: any) => {
-      return setData(res.data);
-    });
+    const row=  async () => 
+      
+      {
+      axios.get("https://api.tvmaze.com/search/shows?q=all").then((res: any) => {
+        await setData(res.data);
+      });
+      }
+    
+    row();
   }, []);
   return (
     <>
